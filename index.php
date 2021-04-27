@@ -6,7 +6,6 @@
     <style>
         body {
             font: 15px Arial, sans-serif;
-
         }
 
         table {
@@ -19,7 +18,6 @@
             border: 1px solid black;
             text-align: center;
             border-collapse: collapse;
-
         }
 
         th,
@@ -32,7 +30,6 @@
 <body>
     <?php
     error_reporting(0);
-
     // DELETE OPERATION 
     if (isset($_POST['submit'])) {
         // GET VALUE FROM CHECKBOXES
@@ -56,7 +53,6 @@
             <span>Textfile as a record storage</span>
         </h3>
         <h1>STUDENT RECORDS</h1>
-
         <form action="" method="POST" name="myform">
             <table id="table">
                 <tr>
@@ -82,7 +78,6 @@
                     $studentName = $studentInfoArray[1];
                     $studentLastName = $studentInfoArray[2];
                     $studentEmail = $studentInfoArray[3];
-
                     // DISPLAY EACH STUDENT DATA INTO THE TABLE
                     echo ("<tr> <td><input type=\"checkbox\" value=\"$studentID|$studentName|$studentLastName|$studentEmail\" name=\"student[]\" class=\"select\"></td>
                         <td>" . $studentID . "</td>
@@ -100,6 +95,7 @@
         </form>
         <br>
     </center>
+    <footer style="width: auto; text-align:center;">Jhen Duenas</footer>
 </body>
 
 </html>

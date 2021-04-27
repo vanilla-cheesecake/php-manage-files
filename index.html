@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<head>
+  <style>
+    .container{
+    position: relative;
+    width: 600px;
+    margin: 0 auto;
+    display: flex;
+    border-radius: 65px;
+    text-align: left;
+    background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+    }
+    .profile{
+      font-size: 15px;
+      text-align: left;
+      padding: 50px;
+      background: whitesmoke;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    body{
+      font-family: 'Roboto', sans-serif; 
+    }
+    h1{
+      border-bottom: 1px solid white;
+    }
+  </style>
+  <script type="text/javascript">
+    function showCard() {
+    var name = document
+        .getElementById("profile")
+        .getElementsByTagName("profilecard")[0]
+        .getElementsByTagName("name")[0].firstChild.data;
+    var age = document
+        .getElementById("profile")
+        .getElementsByTagName("profilecard")[0]
+        .getElementsByTagName("age")[0].firstChild.data;
+    var phone = document
+        .getElementById("profile")
+        .getElementsByTagName("profilecard")[0]
+        .getElementsByTagName("phone")[0].firstChild.data;
+    var email = document
+        .getElementById("profile")
+        .getElementsByTagName("profilecard")[0]
+        .getElementsByTagName("email")[0].firstChild.data;
+    var address = document
+        .getElementById("profile")
+        .getElementsByTagName("profilecard")[0]
+        .getElementsByTagName("address")[0].firstChild.data;
+
+    document.getElementById("Name").innerHTML = name;
+    document.getElementById("Age").innerHTML = age;
+    document.getElementById("Phone").innerHTML = phone;
+    document.getElementById("Email").innerHTML = email;
+    document.getElementById("Address").innerHTML = address;
+     
+    }
+  </script>
+</head>
+<html">
+    <xml id="profile" style="display: none">
+        <profilecard>
+          <name>Golez</name>
+          <age>22</phone>
+          <phone>+63942465465</phone>
+          <email>test@email.com</email>
+          <address>Phillipines</address>
+        </profilecard>
+      </xml>
+  <body onload="showCard()">
+<center> <h1 style="font-size: 50px;">DISPLAYING DATA FROM XML</h1><br>
+  <div class="container">
+
+      <div class="profile">
+        <h1>PROFILE CARD</h1>
+      <h2>Name: <span id="Name"></span></h2>
+      <h2>Age: <span id="Age"></span></h2>
+      <h2>Phone: <span id="Phone"></span></h2>
+      <h2>Email: <span id="Email"></span></h2>
+      <h2>Address: <span id="Address"></span></h2>
+      </div>
+  </div>
+
+</center>
+  </body>
+</html>
